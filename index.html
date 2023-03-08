@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="assets/scripts/bootstrap.bundle.js"></script>
     <link rel="stylesheet" href="/assets/styles/bootstrap.css">
     <link rel="stylesheet" href="/assets/styles/estilazo.css">
 </head>
@@ -13,12 +14,13 @@
 <!-- TODO: Carrousel, fix the sticky footer, add images, change primary/secondary colors -->
 
 <body>
-    <script src="assets/scripts/bootstrap.bundle.js"></script>
 
     <header>
-        <nav class="navbar navbar-expand-lg bg-dark-subtle">
+        <nav class="navbar navbar-expand-lg bg-transparent">
             <div class="container-fluid">
-                <a href="#" class="navbar-brand">Clothing</a>
+                <a href="#" class="navbar-brand px-2">
+                    <img src="/assets/img/1280px-Chanel_logo_interlocking_cs.svg(3).png">
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -40,58 +42,147 @@
         </nav>
     </header>
 
-    <div class="container">
+    <div class="container-fluid px-0 pb-3">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/assets/img/milan.jpg" class="d-block w-100 rounded-bottom-3" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="/assets/img/harajuku.jpg" class="d-block w-100 rounded-bottom-3" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="/assets/img/les.jpg" class="d-block w-100 rounded-bottom-3" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="container py-2">
         <div id="body">
             <div class="border-bottom border-dark py-2" id="headwear">
                 <h3> Headwear </h3>
                 <div>
-                    Headgear can be an article of fashion, usually hats, caps or hoods. The formal man's black silk top
-                    hat was formerly an indispensable portion of the suit, and women's hats have, over the years,
-                    attained a fantastic number of shapes ranging from immense confections to no more than a few bits of
-                    cloth and decorations piled on top of the head. Some hats, such as Deep Blue Sea, are showpiece
-                    creations created more as works of art than as practical items of fashion, and may be worth
-                    thousands or millions of dollars.
+                    <p>
+                        Headgear can be an article of fashion, usually hats, caps or hoods. The formal man's black silk
+                        top
+                        hat was formerly an indispensable portion of the suit, and women's hats have, over the years,
+                        attained a fantastic number of shapes ranging from immense confections to no more than a few
+                        bits of
+                        cloth and decorations piled on top of the head. Some hats, such as Deep Blue Sea, are showpiece
+                        creations created more as works of art than as practical items of fashion, and may be worth
+                        thousands or millions of dollars.
+                    </p>
                 </div>
             </div>
             <div class="border-bottom border-dark py-2" id="tops">
                 <h3> Tops </h3>
                 <div>
-                    A top is an item of clothing that covers at least the chest, but which usually covers most of the
-                    upper human body between the neck and the waistline. The bottom of tops can be as short as
-                    mid-torso, or as long as mid-thigh. Men's tops are generally paired with pants, and women's with
-                    pants or skirts. Common types of tops are t-shirts, blouses and shirts.
+                    <p>
+                        A top is an item of clothing that covers at least the chest, but which usually covers most of
+                        the
+                        upper human body between the neck and the waistline. The bottom of tops can be as short as
+                        mid-torso, or as long as mid-thigh. Men's tops are generally paired with pants, and women's with
+                        pants or skirts. Common types of tops are t-shirts, blouses and shirts.
+                    </p>
                 </div>
             </div>
             <div class="border-bottom border-dark py-2" id="bracelets">
                 <h3> Bracelets </h3>
                 <div>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus ipsum provident eos, velit
-                    voluptatem odio quasi. Nostrum sequi culpa voluptates labore consectetur quas, eius, perspiciatis
-                    maxime quaerat deleniti consequuntur repellendus!
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus ipsum provident eos, velit
+                        voluptatem odio quasi. Nostrum sequi culpa voluptates labore consectetur quas, eius,
+                        perspiciatis
+                        maxime quaerat deleniti consequuntur repellendus!
+                    </p>
                 </div>
             </div>
             <div class="border-bottom border-dark py-2" id="pants">
                 <h3> Pants </h3>
                 <div>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ipsum molestiae quisquam labore
-                    facere? Voluptate, officia. Quos magni odio perferendis inventore, quas voluptatum officiis suscipit
-                    maxime omnis! Quisquam, veniam earum!
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ipsum molestiae quisquam
+                        labore
+                        facere? Voluptate, officia. Quos magni odio perferendis inventore, quas voluptatum officiis
+                        suscipit
+                        maxime omnis! Quisquam, veniam earum!
+                    </p>
                 </div>
             </div>
             <div class="py-2" id="shoes">
                 <h3> Shoes </h3>
                 <div>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum itaque neque at hic officiis saepe
-                    quo porro. Corrupti nostrum laudantium molestias id nulla? Veniam maxime rem saepe incidunt eius
-                    officia.
+                    <p> A shoe is an item of footwear intended to protect and comfort the human foot. They are often
+                        worn
+                        with a sock. Shoes are also used as an item of decoration and fashion. The design of shoes has
+                        varied enormously through time and from culture to culture, with form originally being tied to
+                        function. Though the human foot can adapt to varied terrains and climate conditions, it is still
+                        vulnerable to environmental hazards such as sharp rocks and temperature extremes, which shoes
+                        protect against. Some shoes are worn as safety equipment, such as steel-toe boots which are
+                        required
+                        footwear at industrial worksites.
+                    </p>
+
+                    <p>
+                        Additionally, fashion has often dictated many design elements, such as whether shoes have very
+                        high
+                        heels or flat ones. Contemporary footwear varies widely in style, complexity and cost. Basic
+                        sandals
+                        may consist of only a thin sole and simple strap and be sold for a low cost. High fashion shoes
+                        made
+                        by famous designers may be made of expensive materials, use complex construction and sell for
+                        large
+                        sums of money. Some shoes are designed for specific purposes, such as boots designed
+                        specifically
+                        for mountaineering or skiing, while others have more generalized usage such as sneakers which
+                        have
+                        transformed from a special purpose sport shoe into a general use shoe.
+                    </p>
+
+                    <p>
+                        Traditionally, shoes have been made from leather, wood or canvas, but are increasingly being
+                        made
+                        from rubber, plastics, and other petrochemical-derived materials. Globally, the shoe industry is
+                        a $200 billion a year industry. 90% of shoes end up in land-fills, because the materials are
+                        hard
+                        to separate, recycle or otherwise reuse.
+                    </p>
                 </div>
             </div>
         </div>
     </div>
 
-    <footer class="bg-dark text-light text-center text-lg-start fixed-bottom">
-        <div class="text-center p-3"> © 2023. Todos los derechos reservados. </div>
-    </footer>
+    <div class="container-fluid px-0">
+        <footer class="py-3 mt-4 bg-dark-subtle">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+            </ul>
+            <p class="text-center text-muted">© 2023. Todos los derechos reservados.</p>
+        </footer>
+    </div>
 
 </body>
 
