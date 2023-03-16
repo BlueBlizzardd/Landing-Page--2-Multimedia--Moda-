@@ -9,180 +9,510 @@
     <script src="assets/scripts/bootstrap.bundle.js"></script>
     <link rel="stylesheet" href="/assets/styles/bootstrap.css">
     <link rel="stylesheet" href="/assets/styles/estilazo.css">
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/26176a4f6b.js" crossorigin="anonymous"></script>
+
+    <!-- Custom font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&display=swap" rel="stylesheet">
 </head>
 
-<!-- TODO: Carrousel, fix the sticky footer, add images, change primary/secondary colors -->
+<!-- TODO: Carrousel, fix the sticky footer, change primary/secondary colors -->
 
 <body>
+    <!-- Nav -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top">
+        <div class="container">
+            <a href="/" class="navbar-brand d-flex justify-content-between align-items-center order-lg-0">
+                <img src="/assets/img/shopping-bag-icon.png" alt="Site_Icon" />
+                <span class="text-uppercase fw-lighter ms-2">Ropa</span>
+            </a>
 
-    <header>
-        <nav class="navbar navbar-expand-lg bg-transparent">
-            <div class="container-fluid">
-                <a href="#" class="navbar-brand px-2">
-                    <img src="/assets/img/1280px-Chanel_logo_interlocking_cs.svg(3).png">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+            <div class="order-lg-2">
+                <button type="button" class="btn position-relative">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge bg-primary">5</span>
                 </button>
+                <button type="button" class="btn position-relative">
+                    <i class="fa fa-heart"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge bg-primary">2</span>
+                </button>
+                <button type="button" class="btn position-relative">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
 
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item"> <a href="#headwear" class="nav-link" aria-current="page"> Headwear </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse order-lg-1" id="navMenu">
+                <ul class="navbar-nav mx-auto text-center">
+                    <li class="nav-item px-2 py-2">
+                        <a href="" class="nav-link text-uppercase text-dark">Home</a>
+                    </li>
+                    <li class="nav-item px-2 py-2">
+                        <a href="#collection" class="nav-link text-uppercase text-dark">Collection</a>
+                    </li>
+                    <li class="nav-item px-2 py-2">
+                        <a href="#specials" class="nav-link text-uppercase text-dark">Specials</a>
+                    </li>
+                    <li class="nav-item px-2 py-2">
+                        <a href="#about" class="nav-link text-uppercase text-dark">About Us</a>
+                    </li>
+                    <li class="nav-item px-2 py-2 border-0">
+                        <a href="#popular" class="nav-link text-uppercase text-dark">Popular</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Collection -->
+    <section id="collection" class="py-5">
+        <div class="container">
+            <div class="title text-center">
+                <h2 class="position-relative d-inline-block">New Collection</h2>
+            </div>
+
+            <div class="row g-0">
+                <div class="d-flex flex-wrap justify-content-center mt-5 filter-button-group">
+                    <button type="button" class="btn m-2 text-dark active-filter-btn" data-filter="*">All</button>
+                    <button type="button" class="btn m-2 text-dark" data-filter=".best">Best Sellers</button>
+                    <button type="button" class="btn m-2 text-dark" data-filter=".feat">Featured</button>
+                    <button type="button" class="btn m-2 text-dark" data-filter=".new">New Arrival</button>
+                </div>
+
+                <div class="collection-list mt-4 row gx-0 gy-3">
+                    <div class="col-md-6 col-lg-4 col-xl-3 p-2 best">
+                        <div class="collection-img position-relative">
+                            <img src="/assets/img/c_formal_gray_shirt.png" class="w-100">
+                            <span
+                                class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="rating mt-3">
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                            </div>
+                            <p class="text-capitalize my-1">Striped Blouse</p>
+                            <span class="fw-bold">$7.49</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 col-xl-3 p-2 feat">
+                        <div class="collection-img position-relative">
+                            <img src="/assets/img/c_pant_girl.png" class="w-100">
+                            <span
+                                class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="rating mt-3">
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                            </div>
+                            <p class="text-capitalize my-1">Blue Jeans</p>
+                            <span class="fw-bold">$19.99</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 col-xl-3 p-2 new">
+                        <div class="collection-img position-relative">
+                            <img src="/assets/img/c_polo-shirt.png" class="w-100">
+                            <span
+                                class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="rating mt-3">
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                            </div>
+                            <p class="text-capitalize my-1">Cream Corset</p>
+                            <span class="fw-bold">$23.99</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 col-xl-3 p-2 best">
+                        <div class="collection-img position-relative">
+                            <img src="/assets/img/c_shirt-girl.png" class="w-100">
+                            <span
+                                class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="rating mt-3">
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                            </div>
+                            <p class="text-capitalize my-1">Blue Top</p>
+                            <span class="fw-bold">$10.00</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 col-xl-3 p-2 feat">
+                        <div class="collection-img position-relative">
+                            <img src="/assets/img/c_t-shirt_men.png" class="w-100">
+                            <span
+                                class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="rating mt-3">
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                            </div>
+                            <p class="text-capitalize my-1">Gray Jacket</p>
+                            <span class="fw-bold">$15.00</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 col-xl-3 p-2 new">
+                        <div class="collection-img position-relative">
+                            <img src="/assets/img/c_tunic-shirt_girl.png" class="w-100">
+                            <span
+                                class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="rating mt-3">
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                            </div>
+                            <p class="text-capitalize my-1">Black Shirt</p>
+                            <span class="fw-bold">$35.50</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 col-xl-3 p-2 best">
+                        <div class="collection-img position-relative">
+                            <img src="/assets/img/c_undershirt.png" class="w-100">
+                            <span
+                                class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="rating mt-3">
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                            </div>
+                            <p class="text-capitalize my-1">Blue and White Blouse</p>
+                            <span class="fw-bold">$25.00</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 col-xl-3 p-2 feat">
+                        <div class="collection-img position-relative">
+                            <img src="/assets/img/c_western-shirt.png" class="w-100">
+                            <span
+                                class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="rating mt-3">
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                            </div>
+                            <p class="text-capitalize my-1">Black Blouse</p>
+                            <span class="fw-bold">$20.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specials -->
+    <section id="specials" class="py-5">
+        <div class="container">
+            <div class="title text-center py-5">
+                <h2 class="position-relative d-inline-block">Special Selection</h2>
+            </div>
+
+            <div class="special-list row g-0">
+                <div class="col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class="special-img position-relative overflow-hidden">
+                        <img src="/assets/img/special_product_1.jpg" class="w-100">
+                        <span
+                            class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+                            <i class="fas fa-heart"></i>
+                        </span>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-capitalize mt-3 mb-1">Lorem Ipsum</p>
+                        <span class="fw-bold d-block">$99.99</span>
+                        <a href="#" class="btn btn-primary mt-3">Add to Cart</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class="special-img position-relative overflow-hidden">
+                        <img src="/assets/img/special_product_2.jpg" class="w-100">
+                        <span
+                            class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+                            <i class="fas fa-heart"></i>
+                        </span>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-capitalize mt-3 mb-1">Lorem Ipsum</p>
+                        <span class="fw-bold d-block">$15.99</span>
+                        <a href="#" class="btn btn-primary mt-3">Add to Cart</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class="special-img position-relative overflow-hidden">
+                        <img src="/assets/img/special_product_3.jpg" class="w-100">
+                        <span
+                            class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+                            <i class="fas fa-heart"></i>
+                        </span>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-capitalize mt-3 mb-1">Lorem Ipsum</p>
+                        <span class="fw-bold d-block">$39.99</span>
+                        <a href="#" class="btn btn-primary mt-3">Add to Cart</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class="special-img position-relative overflow-hidden">
+                        <img src="/assets/img/special_product_4.jpg" class="w-100">
+                        <span
+                            class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+                            <i class="fas fa-heart"></i>
+                        </span>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-capitalize mt-3 mb-1">Lorem Ipsum</p>
+                        <span class="fw-bold d-block">$29.99</span>
+                        <a href="#" class="btn btn-primary mt-3">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row gy-lg-5 align-items-center">
+                <div class="col-lg-6 order-lg-1 text-center text-lg-start">
+                    <div class="title pt-3 pb-5">
+                        <h2 class="position-relative d-inline-block ms-4">About Us</h2>
+                    </div>
+                    <p class="lead text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, ipsam.
+                    </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem fuga blanditiis, modi
+                        exercitationem quae quam eveniet! Minus labore voluptatibus corporis recusandae accusantium
+                        velit, nemo, nobis, nulla ullam pariatur totam quos.</p>
+                </div>
+                <div class="col-lg-6 order-lg-0">
+                    <img src="/assets/img/about_us.jpg" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular -->
+    <section id="popular" class="py-5">
+        <div class="container">
+            <div class="title text-center pt-3 pb-5">
+                <h2 class="position-relative d-inline-block ms-4">Popular This Year</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 col-lg-4 row g-3">
+                    <h3 class="fs-5">Top Rated</h3>
+                    <div class="d-flex align-items-start justify-content-start">
+                        <img src="/assets/img/top_rated_1.jpg" alt="" class="img-fluid pe-3 w-25">
+                        <div>
+                            <p class="mb-0">Blue Shirt</p>
+                            <span>$ 20.00</span>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-start justify-content-start">
+                        <img src="/assets/img/top_rated_2.jpg" alt="" class="img-fluid pe-3 w-25">
+                        <div>
+                            <p class="mb-0">Pixel Watch</p>
+                            <span>$ 20.00</span>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-start justify-content-start">
+                        <img src="/assets/img/top_rated_3.jpg" alt="" class="img-fluid pe-3 w-25">
+                        <div>
+                            <p class="mb-0">Red Hoodie</p>
+                            <span>$ 20.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 row g-3">
+                    <h3 class="fs-5">Best Selling</h3>
+                    <div class="d-flex align-items-start justify-content-start">
+                        <img src="/assets/img/best_selling_1.jpg" alt="" class="img-fluid pe-3 w-25">
+                        <div>
+                            <p class="mb-0">Tuxedo</p>
+                            <span>$ 20.00</span>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-start justify-content-start">
+                        <img src="/assets/img/best_selling_2.jpg" alt="" class="img-fluid pe-3 w-25">
+                        <div>
+                            <p class="mb-0">Striped Jacket</p>
+                            <span>$ 20.00</span>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-start justify-content-start">
+                        <img src="/assets/img/best_selling_3.jpg" alt="" class="img-fluid pe-3 w-25">
+                        <div>
+                            <p class="mb-0">White Shirt</p>
+                            <span>$ 20.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 row g-3">
+                    <h3 class="fs-5">On Sale</h3>
+                    <div class="d-flex align-items-start justify-content-start">
+                        <img src="/assets/img/on_sale_1.jpg" alt="" class="img-fluid pe-3 w-25">
+                        <div>
+                            <p class="mb-0">Deluxe Bag</p>
+                            <span>$ 20.00</span>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-start justify-content-start">
+                        <img src="/assets/img/on_sale_2.jpg" alt="" class="img-fluid pe-3 w-25">
+                        <div>
+                            <p class="mb-0">Gray Hoodie</p>
+                            <span>$ 20.00</span>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-start justify-content-start">
+                        <img src="/assets/img/on_sale_3.jpg" alt="" class="img-fluid pe-3 w-25">
+                        <div>
+                            <p class="mb-0">Formal Shoes</p>
+                            <span>$ 20.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-5">
+        <div class="container">
+            <div class="row text-white g-4">
+                <div class="col-md-6 col-lg-3">
+                    <a class="text-uppercase text-decoration-none brand text-white" href="index.html">Attire</a>
+                    <p class="text-white mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Nostrum mollitia quisquam veniam odit cupiditate, ullam aut voluptas velit dolor ipsam?</p>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-light">Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="my-3">
+                            <a href="#" class="text-white text-decoration-none">
+                                <i class="fas fa-chevron-right me-1"></i> Home
+                            </a>
                         </li>
-                        <li class="nav-item"> <a href="#tops" class="nav-link" aria-current="page"> Tops </a></li>
-                        <li class="nav-item"> <a href="#bracelets" class="nav-link" aria-current="page"> Bracelets </a>
+                        <li class="my-3">
+                            <a href="#" class="text-white text-decoration-none">
+                                <i class="fas fa-chevron-right me-1"></i> Collection
+                            </a>
                         </li>
-                        <li class="nav-item"> <a href="#pants" class="nav-link" aria-current="page"> Pants </a></li>
-                        <li class="nav-item"> <a href="#shoes" class="nav-link" aria-current="page"> Shoes </a></li>
+                        <li class="my-3">
+                            <a href="#" class="text-white text-decoration-none">
+                                <i class="fas fa-chevron-right me-1"></i> Blogs
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="#" class="text-white text-decoration-none">
+                                <i class="fas fa-chevron-right me-1"></i> About Us
+                            </a>
+                        </li>
                     </ul>
                 </div>
-            </div>
-        </nav>
-    </header>
 
-    <div class="container-fluid px-0 pb-3">
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="/assets/img/milan.jpg" class="d-block w-100 rounded-bottom-3" alt="...">
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-light mb-3">Contact Us</h5>
+                    <div class="d-flex justify-content-start align-items-start my-2">
+                        <span class="me-3">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </span>
+                        <span class="fw-light">
+                            Calle 70 entre Av. 11 y 12, Maracaibo, Edo. Zulia
+                        </span>
+                    </div>
+                    <div class="d-flex justify-content-start align-items-start my-2">
+                        <span class="me-3">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                        <span class="fw-light">
+                            ropa.support@gmail.com
+                        </span>
+                    </div>
+                    <div class="d-flex justify-content-start align-items-start my-2">
+                        <span class="me-3">
+                            <i class="fas fa-phone-alt"></i>
+                        </span>
+                        <span class="fw-light">
+                            +58 414 635-9833
+                        </span>
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="/assets/img/harajuku.jpg" class="d-block w-100 rounded-bottom-3" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="/assets/img/les.jpg" class="d-block w-100 rounded-bottom-3" alt="...">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </div>
 
-    <div class="container py-2">
-        <div id="body">
-            <div class="border-bottom border-dark py-2" id="headwear">
-                <h3> Headwear </h3>
-                <div>
-                    <p>
-                        Headgear can be an article of fashion, usually hats, caps or hoods. The formal man's black silk
-                        top
-                        hat was formerly an indispensable portion of the suit, and women's hats have, over the years,
-                        attained a fantastic number of shapes ranging from immense confections to no more than a few
-                        bits of
-                        cloth and decorations piled on top of the head. Some hats, such as Deep Blue Sea, are showpiece
-                        creations created more as works of art than as practical items of fashion, and may be worth
-                        thousands or millions of dollars.
-                    </p>
-                </div>
-            </div>
-            <div class="border-bottom border-dark py-2" id="tops">
-                <h3> Tops </h3>
-                <div>
-                    <p>
-                        A top is an item of clothing that covers at least the chest, but which usually covers most of
-                        the
-                        upper human body between the neck and the waistline. The bottom of tops can be as short as
-                        mid-torso, or as long as mid-thigh. Men's tops are generally paired with pants, and women's with
-                        pants or skirts. Common types of tops are t-shirts, blouses and shirts.
-                    </p>
-                </div>
-            </div>
-            <div class="border-bottom border-dark py-2" id="bracelets">
-                <h3> Bracelets </h3>
-                <div>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus ipsum provident eos, velit
-                        voluptatem odio quasi. Nostrum sequi culpa voluptates labore consectetur quas, eius,
-                        perspiciatis
-                        maxime quaerat deleniti consequuntur repellendus!
-                    </p>
-                </div>
-            </div>
-            <div class="border-bottom border-dark py-2" id="pants">
-                <h3> Pants </h3>
-                <div>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ipsum molestiae quisquam
-                        labore
-                        facere? Voluptate, officia. Quos magni odio perferendis inventore, quas voluptatum officiis
-                        suscipit
-                        maxime omnis! Quisquam, veniam earum!
-                    </p>
-                </div>
-            </div>
-            <div class="py-2" id="shoes">
-                <h3> Shoes </h3>
-                <div>
-                    <p> A shoe is an item of footwear intended to protect and comfort the human foot. They are often
-                        worn
-                        with a sock. Shoes are also used as an item of decoration and fashion. The design of shoes has
-                        varied enormously through time and from culture to culture, with form originally being tied to
-                        function. Though the human foot can adapt to varied terrains and climate conditions, it is still
-                        vulnerable to environmental hazards such as sharp rocks and temperature extremes, which shoes
-                        protect against. Some shoes are worn as safety equipment, such as steel-toe boots which are
-                        required
-                        footwear at industrial worksites.
-                    </p>
-
-                    <p>
-                        Additionally, fashion has often dictated many design elements, such as whether shoes have very
-                        high
-                        heels or flat ones. Contemporary footwear varies widely in style, complexity and cost. Basic
-                        sandals
-                        may consist of only a thin sole and simple strap and be sold for a low cost. High fashion shoes
-                        made
-                        by famous designers may be made of expensive materials, use complex construction and sell for
-                        large
-                        sums of money. Some shoes are designed for specific purposes, such as boots designed
-                        specifically
-                        for mountaineering or skiing, while others have more generalized usage such as sneakers which
-                        have
-                        transformed from a special purpose sport shoe into a general use shoe.
-                    </p>
-
-                    <p>
-                        Traditionally, shoes have been made from leather, wood or canvas, but are increasingly being
-                        made
-                        from rubber, plastics, and other petrochemical-derived materials. Globally, the shoe industry is
-                        a $200 billion a year industry. 90% of shoes end up in land-fills, because the materials are
-                        hard
-                        to separate, recycle or otherwise reuse.
-                    </p>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-light mb-3">Follow Us</h5>
+                    <div>
+                        <ul class="list-unstyled d-flex">
+                            <li>
+                                <a href="#" class="text-white text-decoration-none fs-4 me-4">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white text-decoration-none fs-4 me-4">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white text-decoration-none fs-4 me-4">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white text-decoration-none fs-4 me-4">
+                                    <i class="fab fa-pinterest"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </footer>
 
-    <div class="container-fluid px-0">
-        <footer class="py-3 mt-4 bg-dark-subtle">
-            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
-            </ul>
-            <p class="text-center text-muted">© 2023. Todos los derechos reservados.</p>
-        </footer>
-    </div>
+    <!-- JQuery -->
+    <script src="/assets/scripts/jquery-3.6.0.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="/assets/scripts/bootstrap.bundle.js"></script>
 
 </body>
 
